@@ -2,7 +2,7 @@
 ==========================
 1-General Styles
 2-Navigation
-3-Audio Player
+3-Audio Player
 4-Social Fonts
 5-Albums
 6-Breadcrumb
@@ -33,7 +33,7 @@
 body {
 	font-family: 'Roboto', sans-serif;
 	color: #fff;
-	background: #000;
+	background: #00000000;
 }
 a{
 	outline:none !important;

@@ -2,7 +2,7 @@
 ==========================
 1-General Styles
 2-Navigation
-3-Audio Player
+3-Audio Player
 4-Social Fonts
 5-Albums
 6-Breadcrumb
@@ -544,7 +544,7 @@ header .container {
 	display: block;
 	width: 10px;
 	text-align: center;
-	display: block !important;
+	display:  !important;
 }
 .jp-playlist li.jp-playlist-current a {
 	color: #00ff33;
@@ -759,8 +759,8 @@ header .container {
 	display: block;
 	height: 29px;
 	width: 29px;
-	background: #262525;
-	color: #10aaaf;
+	background: #00fd19;
+	color: #020202;
 	text-align: center;
 	line-height: 29px;
 	text-decoration: none;

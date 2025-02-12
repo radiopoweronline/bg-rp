@@ -802,7 +802,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let startX;
     albumsCarousel.addEventListener('touchstart', function(e) {
         startX = e.touches[0].clientX;
-    });
+    }, { passive: false });
+
     albumsCarousel.addEventListener('touchend', function(e) {
         let endX = e.changedTouches[0].clientX;
         if (startX - endX > 50) {
@@ -810,7 +811,8 @@ document.addEventListener('DOMContentLoaded', function() {
         } else if (endX - startX > 50) {
             document.querySelector('.prev-album').click();
         }
-    });
+        e.preventDefault();
+    }, { passive: false });
 });
 
 /* =========================

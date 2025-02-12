@@ -625,6 +625,8 @@ header .container {
    5-Albums
    ========================*/
 
+
+
 #albums .container {
 	position: relative;
 	padding-bottom: 20px;
@@ -794,91 +796,23 @@ a.next-album {
 	border-bottom: 2px solid #171717;
 	padding-bottom: 34px;
 }
-.album-purchase img {
-	max-width: 100%;
-	height: auto;
-	margin-bottom: 22px;
-	margin-top: 32px;
-}
-.album-purchase a {
-	display: block;
-	background: #1a1a1a;
-	color: #10aaaf;
-	font-size: 15px;
-	font-family: oswald;
-	font-family: 300;
-	text-transform: uppercase;
-	text-decoration: none;
-	padding: 12px 12px 12px 15px;
-	border-radius: 5px;
-	margin-bottom: 12px;
-}
-.album-purchase a span {
-	color: #fff;
-	float: right;
-}
-.album-detail-content h3 {
-	text-transform: uppercase;
-	font-size: 18px;
-	line-height: 20px;
-	margin: 0;
-	margin-top: 32px;
-	margin-bottom: 13px;
-}
-.album-detail-content h4 {
-	text-transform: uppercase;
-	font-size: 38px;
-	line-height: 20px;
-	color: #10aaaf;
-	margin-bottom: 22px;
-}
-.album-detail-content li {
-	display: inline-block;
-	color: #ffbd00;
-	margin-bottom: 15px;
-}
-.album-detail-content li span {
-	color: #fff;
-	font-size: 14px;
-	font-family: roboto;
-	font-weight: 300;
-	margin-right: 10px;
-}
-.album-detail-content p {
-	color: #878787;
-	font-weight: 300;
-	line-height: 26px;
-	font-family: roboto;
-	padding-bottom: 35px;
-}
-.related-albums {
-	margin-top: 65px;
-}
-.related-album {
-	float: left;
-	margin-right: 30px;
-	margin-top: 25px;
-}
-.related-album img {
-	max-width: 170px;
-	width: 100%;
-	height: auto;
-}
-.related-album h3 {
-	color: #fff;
-	font-size: 14px;
-	line-height: 20px;
-	text-transform: uppercase;
-	margin: 0;
-	margin-top: 24px;
-}
-.related-album h4 {
-	color: #10aaaf;
-	font-size: 12px;
-	line-height: 20px;
-	text-transform: uppercase;
-	margin: 0;
-}
+/* Funcionalidad táctil */
+document.addEventListener('DOMContentLoaded', function() {
+    let albumsCarousel = document.querySelector('.albums-carousel');
+    let startX;
+    albumsCarousel.addEventListener('touchstart', function(e) {
+        startX = e.touches[0].clientX;
+    });
+    albumsCarousel.addEventListener('touchend', function(e) {
+        let endX = e.changedTouches[0].clientX;
+        if (startX - endX > 50) {
+            document.querySelector('.next-album').click();
+        } else if (endX - startX > 50) {
+            document.querySelector('.prev-album').click();
+        }
+    });
+});
+
 /* =========================
    6-Breadcrumb
    ========================*/

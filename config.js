@@ -2,7 +2,7 @@ window.streams = {
     timeRefresh: 10000,
     stations: [
         {
-            name: "EN VIVO",
+            name: "ON AIR",
             hash: "",
             description: "",
             logo: "assets1/radio_cover.webp",

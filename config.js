@@ -2,9 +2,9 @@ window.streams = {
     timeRefresh: 10000,
     stations: [
         {
-            name: "Radio Power",
+            name: "EN VIVO",
             hash: "",
-            description: "Con el poder de los clasicos",
+            description: "",
             logo: "assets1/radio_cover.webp",
             album: "assets1/radio_cover.webp",
             cover: "",
